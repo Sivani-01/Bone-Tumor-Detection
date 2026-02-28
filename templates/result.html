@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Prediction Result</h1>
+            <p>
+                Thank you for using our Bone Tumor Prediction Platform. Below is the result of your analysis.
+            </p>
+        </div>
+    </section>
+
+    <!-- Result Section -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-card">
+                <p><strong>Predicted Status:</strong> {{ status }}</p>
+                <p>
+                    <strong>Interpretation:</strong><br>
+                    - <strong>AWD (Alive With Disease):</strong> The patient is alive but shows evidence of the disease.<br>
+                    - <strong>D (Deceased):</strong> The patient has passed away due to the disease.<br>
+                    - <strong>NED (No Evidence of Disease):</strong> The patient shows no signs of the disease.
+                </p>
+                <a href="/" class="download-btn">Predict Again</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <p>&copy; 2023 Bone Tumor Predictor. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
