@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brain Tumor Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Welcome to Our Bone Tumor Prediction Platform</h1>
+            <p>
+                Accurate and early detection of bone tumors is critical for effective treatment. 
+                Our AI-powered platform provides predictions based on advanced machine learning models.
+            </p>
+            <a href="#prediction-form" class="cta-btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🧠</span>
+                    <h3>AI-Powered Analysis</h3>
+                    <p>Our platform uses state-of-the-art machine learning models for accurate predictions.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📊</span>
+                    <h3>Data-Driven Insights</h3>
+                    <p>We analyze medical data to provide meaningful insights into bone tumor status.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">👩‍⚕️</span>
+                    <h3>Professional Guidance</h3>
+                    <p>Consult healthcare professionals for further evaluation based on our predictions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works-section">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <span class="step-icon">📝</span>
+                    <h3>Step 1: Input Data</h3>
+                    <p>Enter your age, gender, tumor grade, and other relevant details.</p>
+                </div>
+                <div class="step">
+                    <span class="step-icon">🤖</span>
+                    <h3>Step 2: AI Analysis</h3>
+                    <p>Our AI model processes the input data using a trained neural network.</p>
+                </div>
+                <div class="step">
+                    <span class="step-icon">✅</span>
+                    <h3>Step 3: Get Results</h3>
+                    <p>Receive a prediction about the status of the bone tumor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prediction Form -->
+    <!-- Prediction Form -->
+<section id="prediction-form" class="profile-section">
+    <div class="container">
+        <h2 class="section-title">Bone Tumor Prediction</h2>
+        <div class="profile-card">
+            <form method="POST" class="input-form">
+                <label>Age:</label>
+                <input type="number" name="Age" step="0.1" required>
+
+                {% for category, options in categories.items() %}
+                    <label>{{ category }}:</label>
+                    <select name="{{ category }}" required>
+                        {% for option in options %}
+                            <option value="{{ option }}">{{ option }}</option>
+                        {% endfor %}
+                    </select>
+                {% endfor %}
+
+                <button type="submit" class="download-btn">Predict Status</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Users Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"This platform helped me understand my condition better. Highly recommend!"</p>
+                    <span>- John Doe</span>
+                </div>
+                <div class="testimonial">
+                    <p>"The predictions were accurate, and the process was seamless."</p>
+                    <span>- Jane Smith</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <p>&copy; 2023 Brain Tumor Predictor. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
