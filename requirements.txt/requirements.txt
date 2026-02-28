@@ -1,5 +1,0 @@
-flask
-tensorflow-cpu
-pandas
-numpy
-scikit-learn
